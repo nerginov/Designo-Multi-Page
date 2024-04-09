@@ -1,0 +1,55 @@
+@use "../../mixins.module.scss";
+@use "../../variables.module.scss" as *;
+.navigation-bar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 2.4rem;
+
+  @include mixins.media(tablet) {
+    padding: 6.4rem 3.9rem;
+  }
+  @include mixins.media(small) {
+    padding: 6.4rem 16.5rem;
+  }
+
+  &__logo {
+    height: 2.7rem;
+    img {
+      cursor: pointer;
+      height: 2.7rem;
+      width: auto;
+    }
+  }
+
+  &__menu {
+    &-toggle-btn {
+      background: none;
+      border: none;
+      appearance: none;
+      width: 2.4rem;
+      height: 2rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 4rem;
+      li {
+        a {
+          cursor: pointer;
+          text-decoration: none;
+          color: $darkGrey;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}

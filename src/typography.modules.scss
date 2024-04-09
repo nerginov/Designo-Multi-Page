@@ -1,0 +1,38 @@
+@use "./variables.module.scss" as *;
+
+body {
+  p,
+  button,
+  span {
+    font-size: map-get($main-text, font-size);
+    line-height: map-get($main-text, line-height);
+    font-weight: map-get($main-text, font-weight);
+    font-style: map-get($main-text, font-style);
+  }
+  li {
+    font-size: map-get($list, font-size);
+    font-weight: map-get($list, font-weight);
+    line-height: map-get($list, line-height);
+    letter-spacing: map-get($list, letter-spacing);
+  }
+
+  h3 {
+    font-size: map-get($header-S, font-size);
+    line-height: map-get($header-S, line-height);
+    font-weight: map-get($header-S, font-weight);
+  }
+
+  h2 {
+    font-size: map-get($header-M, font-size);
+    line-height: map-get($header-M, line-height);
+    font-weight: map-get($header-M, font-weight);
+    letter-spacing: map-get($header-M, letter-spacing);
+  }
+
+  h1 {
+    font-size: map-get($header-L, font-size);
+    line-height: map-get($header-L, line-height);
+    font-weight: map-get($header-L, font-weight);
+    letter-spacing: map-get($header-L, letter-spacing);
+  }
+}
