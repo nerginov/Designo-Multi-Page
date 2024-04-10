@@ -1,3 +1,23 @@
+@use "../../mixins.module.scss";
+
+.home > :not(:first-child) {
+  margin-inline: 2.4rem;
+}
+
+.home > * {
+  @include mixins.media(tablet) {
+    margin-inline: 4rem !important;
+  }
+  @include mixins.media(small) {
+    margin-inline: 16.5rem !important;
+  }
+}
+
 .home {
-  padding-inline: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+  @include mixins.media(tablet) {
+    gap: 16rem;
+  }
 }

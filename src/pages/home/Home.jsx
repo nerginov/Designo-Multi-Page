@@ -1,8 +1,14 @@
 import React from "react";
-import styles from "./Home";
-import Navbar from "../../components/navbar/Navbar";
+import styles from "./Home.module.scss";
+import Hero from "./Hero";
+import Projects from "./Projects";
 const Home = () => {
-  return <div className={styles.home}></div>;
+  return (
+    <div className={styles.home}>
+      <Hero></Hero>
+      <Projects></Projects>
+    </div>
+  );
 };
 
 export default Home;

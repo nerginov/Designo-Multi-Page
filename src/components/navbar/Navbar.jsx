@@ -12,7 +12,7 @@ const Navbar = () => {
   const windowWidth = useWindowResize();
   const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
   const navigate = useNavigate();
-  const handleLogoClick = () => navigate("/home");
+  const handleLogoClick = () => navigate("/");
   const menuModalToggle = () => {
     setIsMenuModalOpen(!isMenuModalOpen);
   };

@@ -1,0 +1,15 @@
+@use "../../mixins.module.scss";
+
+.projects {
+  display: grid;
+  gap: 2.4rem;
+  @include mixins.media(small) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    &__web {
+      grid-row: 1/-1;
+      grid-column: 1/1;
+    }
+  }
+}

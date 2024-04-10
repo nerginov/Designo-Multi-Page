@@ -1,0 +1,33 @@
+@use "../../variables.module.scss" as *;
+.main-button {
+  appearance: none;
+  border: none;
+
+  border-radius: 1rem;
+  padding: 1.8rem 2.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  cursor: pointer;
+
+  &--light {
+    background: $white;
+    color: $darkGrey;
+    &:hover {
+      background: $lightPeach;
+      color: $white;
+    }
+  }
+
+  &--dark {
+    background: $peach;
+    color: $white;
+    &:hover {
+      background: $lightPeach;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

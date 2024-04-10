@@ -10,38 +10,55 @@ $lightPeach: #ffad9b;
 $darkGrey: #333136;
 $lightGrey: #f1f3f5;
 
-//typography
-
-$main-text: (
-  font-size: 1.6rem,
-  line-height: 2.6rem,
-  font-weight: 400,
+//phone screens typography
+$main-text-small: (
+  font-size: 1.5rem,
+  line-height: 2.5rem,
+  font-weight: 300,
   font-style: normal,
 );
 
-$list: (
-  font-size: 1.4rem,
+$header-M-small: (
+  font-size: 2.8rem,
+  line-height: 3.6rem,
   font-weight: 400,
-  line-height: normal,
-  letter-spacing: 0.2rem,
+  letter-spacing: 0.014rem,
 );
 
-$header-S: (
-  font-size: 4.8rem,
-  line-height: 4.8rem,
-  font-weight: 500,
+$header-L-small: (
+  font-size: 3.2rem,
+  line-height: 3.6rem,
+  font-weight: 400,
+);
+
+//desktop/tablet typography
+$main-text: (
+  font-size: 1.6rem,
+  line-height: 2.6rem,
 );
 
 $header-M: (
   font-size: 4rem,
   line-height: 4.8rem,
-  font-weight: 500,
   letter-spacing: 0.2rem,
 );
 
 $header-L: (
+  font-size: 4.8rem,
+  line-height: 4.8rem,
+);
+
+//shared
+$list: (
+  font-size: 1.4rem,
+  font-weight: 300,
+  line-height: normal,
+  letter-spacing: 0.2rem,
+);
+
+$header-S: (
   font-size: 2rem,
   line-height: 2.6rem,
-  font-weight: 500,
+  font-weight: 400,
   letter-spacing: 0.5rem,
 );
