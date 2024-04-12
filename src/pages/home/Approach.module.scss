@@ -1,0 +1,69 @@
+@use "../../mixins.module.scss";
+.approach {
+  position: relative;
+  padding-bottom: 38rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @include mixins.media(desktop) {
+    flex-direction: row;
+    gap: 4rem;
+
+    &::after {
+      z-index: 0;
+      position: absolute;
+      transform: rotate(180deg);
+      content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+      width: 100%;
+      height: 100%;
+      right: -16.5rem;
+      top: -5rem;
+      z-index: 0;
+    }
+  }
+
+  &__item {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixins.media(tablet) {
+      flex-direction: row;
+      gap: 4.8rem;
+      justify-content: center;
+    }
+    .approach__img-container {
+      position: relative;
+      @include mixins.media(shared) {
+        &::before {
+          content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+    }
+    .approach__text-container {
+      text-align: center;
+      h3 {
+        margin-top: 4.8rem;
+        margin-bottom: 3.2rem;
+        @include mixins.media(tablet) {
+          margin-top: 0rem;
+          margin-bottom: 1.6rem;
+        }
+        @include mixins.media(tablet) {
+          margin-top: 6.8rem;
+          margin-bottom: 3.2rem;
+        }
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

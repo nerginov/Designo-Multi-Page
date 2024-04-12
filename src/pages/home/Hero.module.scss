@@ -2,6 +2,7 @@
 @use "../../mixins.module.scss";
 
 .hero {
+  z-index: 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@
     @include mixins.media(tablet) {
       transform: translateX(10rem) translateY(-5rem) rotate(180deg);
     }
-    @include mixins.media(small) {
+    @include mixins.media(desktop) {
       transform: translateX(0rem) translateY(0rem) rotate(240deg);
     }
     width: max-content;
@@ -28,14 +29,15 @@
     content: url("../../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
   }
 
-  @include mixins.media(tablet) {
+  @include mixins.media(shared) {
     border-radius: 1rem;
+  }
+  @include mixins.media(tablet) {
     padding: 6rem 5.8rem 0rem 5.8rem;
   }
-  @include mixins.media(small) {
+  @include mixins.media(desktop) {
     max-height: 640px;
     flex-direction: row;
-    border-radius: 1rem;
     padding: 14.5rem 9.5rem 14.5rem 9.5rem;
   }
 
@@ -47,7 +49,7 @@
     align-items: center;
     margin-bottom: 8rem;
 
-    @include mixins.media(small) {
+    @include mixins.media(desktop) {
       align-items: flex-start;
       justify-content: space-between;
       margin-bottom: 0rem;
@@ -58,7 +60,7 @@
       text-align: center;
       color: $white;
 
-      @include mixins.media(small) {
+      @include mixins.media(desktop) {
         text-align: left;
       }
     }
@@ -66,7 +68,7 @@
     h1 {
       margin-bottom: 1.4rem;
 
-      @include mixins.media(tablet) {
+      @include mixins.media(shared) {
         margin-bottom: 4rem;
       }
     }
@@ -75,10 +77,10 @@
       margin-bottom: 2.4rem;
 
       @include mixins.media(tablet) {
-        margin-bottom: 1.9rem;
-      }
-      @include mixins.media(tablet) {
         margin-bottom: 4rem;
+      }
+      @include mixins.media(desktop) {
+        margin-bottom: 1.9rem;
       }
     }
   }
@@ -87,7 +89,7 @@
     img {
       transform: translateY(-17rem);
 
-      @include mixins.media(small) {
+      @include mixins.media(desktop) {
         transform: translateY(10rem) translateX(-10rem);
       }
     }

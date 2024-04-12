@@ -3,7 +3,7 @@
 .projects {
   display: grid;
   gap: 2.4rem;
-  @include mixins.media(small) {
+  @include mixins.media(desktop) {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 

@@ -10,7 +10,7 @@
   @include mixins.media(tablet) {
     padding: 6.4rem 3.9rem;
   }
-  @include mixins.media(small) {
+  @include mixins.media(desktop) {
     padding: 6.4rem 16.5rem;
   }
 

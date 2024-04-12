@@ -4,7 +4,8 @@
 body {
   p,
   span,
-  a {
+  a,
+  address {
     font-size: map-get($main-text-small, font-size);
     font-weight: map-get($main-text-small, font-weight);
     line-height: map-get($main-text-small, line-height);
@@ -13,21 +14,25 @@ body {
   button {
     font-size: map-get($main-text-small, font-size);
   }
+  h1 {
+    font-size: map-get($header-L-small, font-size);
+    line-height: map-get($header-L-small, line-height);
+    font-weight: map-get($header-L-small, font-weight);
+  }
   h2 {
     font-size: map-get($header-M-small, font-size);
     line-height: map-get($header-M-small, line-height);
     font-weight: map-get($header-M-small, font-weight);
     letter-spacing: map-get($header-M-small, letter-spacing);
   }
-
-  h1 {
-    font-size: map-get($header-L-small, font-size);
-    line-height: map-get($header-L-small, line-height);
-    font-weight: map-get($header-L-small, font-weight);
+  h3 {
+    font-size: map-get($header-S, font-size);
+    line-height: map-get($header-S, line-height);
+    font-weight: map-get($header-S, font-weight);
   }
 
   //media
-  @include mixins.media(tablet) {
+  @include mixins.media(shared) {
     p,
     span,
     a {
@@ -43,12 +48,6 @@ body {
       font-weight: map-get($list, font-weight);
       line-height: map-get($list, line-height);
       letter-spacing: map-get($list, letter-spacing);
-    }
-
-    h3 {
-      font-size: map-get($header-S, font-size);
-      line-height: map-get($header-S, line-height);
-      font-weight: map-get($header-S, font-weight);
     }
 
     h2 {

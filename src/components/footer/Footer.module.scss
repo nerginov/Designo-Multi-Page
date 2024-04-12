@@ -1,0 +1,124 @@
+@use "../../variables.module.scss" as *;
+@use "../../mixins.module.scss";
+
+.footer {
+  padding: 25.3rem 2.4rem 6.4rem 2.4rem;
+  max-width: 100vw;
+  z-index: 2;
+  background-color: $black;
+  @include mixins.media(tablet) {
+    padding: 16.6rem 4rem 8rem 4rem;
+  }
+  @include mixins.media(desktop) {
+    padding: 14.4rem 16.4rem 7.2rem 16.4rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    &__nav {
+      text-align: center;
+      width: 100%;
+
+      @include mixins.media(shared) {
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-content__logo-container {
+        position: relative;
+        //bottom border on phone
+        @include mixins.media(phone) {
+          padding-bottom: 3.2rem;
+          margin-bottom: 3.2rem;
+          &::before {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+            opacity: 10%;
+          }
+        }
+
+        img {
+          height: 2.7rem;
+        }
+      }
+
+      ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        @include mixins.media(shared) {
+          flex-direction: row;
+        }
+
+        li {
+          list-style: none;
+          &:active {
+            transform: scale(0.95);
+          }
+
+          a {
+            text-decoration: none;
+            color: $white;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    &__additional-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      @include mixins.media(shared) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .footer-content__addresses {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @include mixins.media(shared) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-content__address {
+          text-align: center;
+          color: $white;
+          opacity: 50.35%;
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .footer-content__social-links {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+        img:hover {
+          filter: brightness(130%);
+        }
+        img:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}

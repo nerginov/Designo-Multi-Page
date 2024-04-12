@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 const Project = ({ href, title, image, className, large }) => {
   const windowWidth = useWindowResize();
   const navigate = useNavigate();
+  //find image to render depending of window size
   const findImage = (i) => {
     if (i === "web") {
       return windowWidth < 768
