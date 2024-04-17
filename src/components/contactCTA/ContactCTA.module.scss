@@ -1,0 +1,83 @@
+@use "../../variables.module.scss" as *;
+@use "../../mixins.module.scss";
+.contact-cta {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 4.8rem);
+  background: $peach;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.5rem;
+  padding: 6.4rem 2.4rem 6.4rem 2.4rem;
+
+  @include mixins.media(shared) {
+    top: -60%;
+  }
+
+  @include mixins.media(tablet) {
+    width: calc(100vw - 7.8rem);
+    padding: 5.7rem 5.9rem 5.7rem 5.9rem;
+  }
+
+  @include mixins.media(desktop) {
+    width: calc(100vw - 33rem);
+    padding: 7.2rem 9.5rem 7.2rem 9.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 30.89%;
+    border-radius: 1.5rem;
+    background-image: url("../../assets/shared/desktop/bg-pattern-call-to-action.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    @include mixins.media(shared) {
+      background-position-y: center;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3.2rem;
+    @include mixins.media(desktop) {
+      width: 50%;
+    }
+
+    h1,
+    p {
+      text-align: center;
+      color: $white;
+      @include mixins.media(desktop) {
+        text-align: left;
+      }
+    }
+
+    h1 {
+      margin-inline: auto;
+      margin-bottom: 3.2rem;
+      @include mixins.media(tablet) {
+        width: 60%;
+      }
+    }
+
+    p {
+      margin-inline: auto;
+      @include mixins.media(tablet) {
+        width: 70%;
+      }
+    }
+  }
+}

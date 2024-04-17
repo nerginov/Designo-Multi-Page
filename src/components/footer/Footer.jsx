@@ -7,6 +7,7 @@ import pinterest from "../../assets/shared/desktop/icon-pinterest.svg";
 import twitter from "../../assets/shared/desktop/icon-twitter.svg";
 import youtube from "../../assets/shared/desktop/icon-youtube.svg";
 import { Link } from "react-router-dom";
+import ContactCTA from "../contactCTA/ContactCTA";
 
 const Footer = () => {
   return (
@@ -73,6 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <ContactCTA></ContactCTA>
     </footer>
   );
 };
